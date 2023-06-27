@@ -1,8 +1,8 @@
 # Definir un hash para asociar los números con las opciones del juego
 OPTIONS = {
-  1 => 'piedra',
-  2 => 'papel',
-  3 => 'tijera'
+  1 => "piedra",
+  2 => "papel",
+  3 => "tijera",
 }
 
 # Mensaje estándar para cerrar el programa
@@ -10,7 +10,7 @@ $simple_exit_message = "Terminando el programa..."
 
 ## FUNCIONES
 
-# Función para desplegar mensaje de despedida 
+# Función para desplegar mensaje de despedida
 def say_farewell_with_gratitude
   puts "#{$simple_exit_message} Gracias por jugar, hasta la próxima. 👾"
 end
@@ -47,9 +47,9 @@ end
 def get_winner(user_choice, computer_choice)
   if user_choice == OPTIONS[computer_choice]
     "Empate 🤝"
-  elsif (user_choice == 'piedra' && OPTIONS[computer_choice] == 'tijera') ||
-        (user_choice == 'papel' && OPTIONS[computer_choice] == 'piedra') ||
-        (user_choice == 'tijera' && OPTIONS[computer_choice] == 'papel')
+  elsif (user_choice == "piedra" && OPTIONS[computer_choice] == "tijera") ||
+        (user_choice == "papel" && OPTIONS[computer_choice] == "piedra") ||
+        (user_choice == "tijera" && OPTIONS[computer_choice] == "papel")
     "Ganaste 🎉"
   else
     "Perdiste 🎻"
